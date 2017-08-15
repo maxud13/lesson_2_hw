@@ -34,7 +34,13 @@ int main(int argc, const char * argv[]) {
             even = true;
         }
         else even = false;
-        NSLog ("%d",latteSoldCount);
+        if(currentClientsCount<oneHourAgoClientsCount)
+        {
+            NSLog(@"скидка на второй кофе");
+        }
+        NSLog (@"всего продано колличество порций:%lu" ,(latteSoldCount+cappuccinoSoldCount+espressoSoldCount+americanoSoldCount));
+               
+        NSLog (@"сумма денег,вырученная за все проданные порции кофе:%f",(priceofLatte*latteSoldCount+priceofcappucinno*cappuccinoSoldCount+priceofEspresso*espressoSoldCount+priceofamericano*americanoSoldCount));
         
     }
     return 0;
