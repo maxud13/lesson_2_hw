@@ -20,14 +20,16 @@ int main(int argc, const char * argv[]) {
         CGFloat varieblefloat=13.1;
         varieblefloat=-13.1;
 
-        NSNumber *variablenumber=@(variableinteger);
+        NSNumber *variablenumber=nil;
+        variablenumber=@(variableinteger);
         variablenumber=@(varieblefloat);
         variablenumber=@(variableBool);
         
         NSString *variablestring=@"text";
         variablestring=@"text2";
+        variablestring=[NSString stringWithFormat:@"%@ %c", variablestring,variableBool];
 
         NSArray *variableArray = @[@(variableBool), @(variableinteger), @(varieblefloat),  variablenumber, variablestring];
     }
-    return 0
+    return 0;
 }
